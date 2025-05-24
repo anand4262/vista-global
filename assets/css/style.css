@@ -26,6 +26,9 @@ body {
     text-transform: uppercase;;
   }
 
+  .gx-5 {
+    --bs-gutter-x: 5rem;
+}
   .btn-filled{
     -webkit-transition: ease-out 0.5s;
     -moz-transition: ease-out 0.5s;
@@ -268,10 +271,45 @@ color: var(--support-color)
  color: var(--support-color)
 }
 
+.teams-section{
+  position: relative;
+}
 
+.bg-pattern{
+  z-index: -99;
+    background-image: url(../images/pattern2.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 220px;
+    
+    position: absolute;
+}
 
+.pattern-top{
+  top: -60px;
+  right: 540px;
+  height: 520px;
+}
+.pattern-bottom{
+height: 220px;
+right: 0;
+bottom: 20px;
+}
 
+.teams-section .card{
+  border: none
+}
+.teams-section .card h5{
+  border-bottom: 6px solid var(--support-color);
+  transition: all ease-in-out;
+  cursor: pointer;
+}
 
+.teams-section .card h5:hover{
+  background: var(--support-color);
+  color: white;
+}
 
 .whatsapp-float {
   position: fixed;
@@ -299,10 +337,6 @@ color: var(--support-color)
   transform: scale(1.1);
 }
 
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-}
 
 @keyframes zoomIn {
   from { background-size: 105%; }
