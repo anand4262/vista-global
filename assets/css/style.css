@@ -271,7 +271,7 @@ color: var(--support-color)
  color: var(--support-color)
 }
 
-.teams-section{
+/* .team-grid{
   position: relative;
 }
 
@@ -292,9 +292,41 @@ color: var(--support-color)
   height: 520px;
 }
 .pattern-bottom{
-height: 220px;
+height: 540px;
 right: 0;
-bottom: 20px;
+bottom: -60px;
+} */
+.team-grid{
+  position: relative;
+}
+
+.team-grid::before,
+.team-grid::after {
+  content: "";
+  position: absolute;
+  background-image: url('../images/pattern2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40%;
+  max-width: 220px;
+  height: 75%;
+  z-index: -2;
+  opacity: 0.8; /* optional: make it subtle */
+  pointer-events: none;
+}
+
+/* Top pattern */
+.team-grid::before {
+  top: 0;
+  right: 75%;
+  transform: translateY(-12%);
+}
+
+/* Bottom pattern */
+.team-grid::after {
+  bottom: 0;
+  right: -30px;
+  transform: translateY(12%);
 }
 
 .teams-section .card{
