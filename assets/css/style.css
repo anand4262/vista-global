@@ -26,6 +26,29 @@ body {
     text-transform: uppercase;;
   }
 
+  .text-support{
+    color: var(--support-color);
+  }
+
+  .text-dark{
+    color: var(--primary-color) !important;
+  }
+
+  .bg-support{
+    background-color: var(--support-color)
+  }
+
+  .bg-dark{
+    background-color: var(--primary-color) !important;
+  }
+
+  .btn-dark{
+     background-color: var(--primary-color);
+     border: none;
+     border-radius: 0;
+     padding: 12px 18px;
+  }
+
   .gx-5 {
     --bs-gutter-x: 5rem;
 }

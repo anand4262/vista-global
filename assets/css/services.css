@@ -1,0 +1,36 @@
+.hero {
+    background-image: url('../images/about.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(35, 31, 32, 0.5); /* translucent dark overlay */
+    z-index: 1;
+  }
+  
+  .hero .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero h2:after{
+    background: var(--support-color);
+    bottom: 6px;
+    position: absolute;
+    content: '';
+    width: 52px;
+    height: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
