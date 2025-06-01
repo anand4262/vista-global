@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vista Global</title>
+  <title>About | Vista Global</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -45,93 +45,68 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="what-we-do.html">What We Do</a></li>
+          <li class="nav-item"><a class="nav-link active" href="what-we-do.html">What We Do</a></li>
           <li class="nav-item"><a class="nav-link" href="partners.html">Partners</a></li>
           <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link active" href="contact-us.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-<header class="hero">
-<div class="content container">
-    <div class="row align-items-center">
-       <!--  <div class="col-md-7">
-            <h2 class="text-support">Contact Us</h2>
-            <p class="text-white mb-5">Feel free to use the form or drop us an email. Old-fashioned call works too.</p>
-
-            <p class="text-white d-flex align-items-center gx-5 mb-4"><span><i class="ri-customer-service-2-fill fs-1"></i></span>9494453169</p>
-            <p class="text-white d-flex align-items-center gx-5 mb-4"><span><i class="ri-mail-fill fs-1"></i></span>support@vistaglobal.com</p>
-            <p class="text-white d-flex align-items-center gx-5 mb-4">
-                <span><i class="ri-map-pin-3-fill fs-1"></i></span>
-                Office No.4, 2nd Floor, 
-                Eshwari Complex, Dr Rajkumar Rd, 
-                Prakash Nagar, Rajajinagar, 
-                Bengaluru, Karnataka 560021
-            </p>
-        </div> -->
-        <div class="col-md-7">
-            <h2 class="text-support">Contact Us</h2>
-            <p class="text-white mb-5 fs-5">
-              Feel free to use the form or drop us an email. Old-fashioned call works too.
-            </p>
-          
-            <div class="contact-info mb-3 d-flex align-items-center">
-              <i class="ri-customer-service-2-fill fs-1 text-support me-4"></i>
-              <span class="text-white fs-4">9494453169</span>
-            </div>
-          
-            <div class="contact-info mb-3 d-flex align-items-center">
-              <i class="ri-mail-fill fs-1 text-support me-4"></i>
-              <span class="text-white fs-4">support@vistaglobal.com</span>
-            </div>
-          
-            <div class="contact-info mb-3 d-flex align-items-center">
-              <i class="ri-map-pin-3-fill fs-2 text-support me-4"></i>
-              <span class="text-white fs-4">
-                Office No.4, 2nd Floor, <br />
-                Eshwari Complex, Dr Rajkumar Rd, <br />
-                Prakash Nagar, Rajajinagar, <br />
-                Bengaluru, Karnataka 560021
-              </span>
-            </div>
-          </div>
-          
-        <div class="col-md-5">
-            <form class="p-4 p-md-5 border text-start  bg-light">
-                <div class="row mb-3">
-                  <div class="col-md-6">
-                    <label for="firstName" class="form-label">First Name</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="John" required>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="lastName" class="form-label">Last Name</label>
-                    <input type="text" class="form-control" id="lastName" placeholder="Doe" required>
-                  </div>
-                </div>
-              
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                  </div>
-              
-                <div class="mb-3">
-                  <label for="message" class="form-label">Message</label>
-                  <textarea class="form-control" id="message" rows="5" placeholder="Type your message here..." required></textarea>
-                </div>
-              
-                <div class="text-center">
-                    <button type="submit" class="btn w-75 btn-primary  btn-dark">Submit</button>
-                </div>
-              </form>
-              
-        </div>
+  <header class="hero mb-10">
+    <div class="container">
+      <h2 class="text-support">Contact Us</h2>
     </div>
+  </header>
+  
+  <main>
+
+
+<div class="container mb-10">
+  <div class="row g-0 shadow-lg rounded overflow-hidden">
+    
+    <!-- Left: Contact Form -->
+    <div class="col-md-7 bg-warning p-5 form-left">
+      <p class="text-muted mb-4">
+       We’d love to hear from you. Fill out the form below and we’ll get back to you soon.
+      </p>
+      <form>
+        <div class="mb-3">
+          <input type="text" class="form-control border-0 border-bottom rounded-0" placeholder="Full Name" required>
+        </div>
+        <div class="mb-3">
+          <input type="email" class="form-control border-0 border-bottom rounded-0" placeholder="Email Address" required>
+        </div>
+        <div class="mb-4">
+          <textarea class="form-control border-0 border-bottom rounded-0" rows="4" placeholder="Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-dark px-5 text-uppercase w-100">Send</button>
+      </form>
+    </div>
+
+    <!-- Right: Info Panel -->
+    <div class="col-md-5 bg-dark text-white p-5 position-relative">
+      <h5 class="fw-bold mb-4">Get in Touch</h5>
+      <p class="mb-3 d-flex align-items-center">
+        <i class="ri-mail-line me-2 fs-2"></i><a class="text-decoration-none text-white" href="mailto:info@vistalegal.com">info@vistalegal.com</a>
+      </p>
+      <p class="mb-3 d-flex align-items-center">
+        <i class="ri-phone-line me-2 fs-2"></i> <a class="text-decoration-none text-white" href="tel:+61123456789">+61 123 456 789</a>
+      </p>
+      <p class="mb-3 d-flex align-items-center">
+        <i class="ri-map-pin-line me-2 fs-2"></i> 101 King Street, Melbourne VIC 3000
+      </p>
+      <p class="mb-0 d-flex align-items-center">
+        <i class="ri-time-line me-2 fs-2"></i> Mon – Fri, 9:00 – 18:00
+      </p>
+    </div>
+
+  </div>
 </div>
-</header>
+
+  </main>
 
 <footer class="bg-dark text-white text-center py-3">
     <div class="container">

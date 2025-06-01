@@ -1,16 +1,4 @@
 
-  // Navbar background toggle on scroll
- /*  window.addEventListener('scroll', () => {
-    const navbar = document.getElementById('mainNavbar');
-    navbar.classList.toggle('bg-darks', window.scrollY > 50);
-    navbar.classList.toggle('navbar-dark', window.scrollY > 50);
-    navbar.classList.toggle('navbar-light', window.scrollY <= 50);
-    navbar.classList.toggle('bg-transparent', window.scrollY <= 50);
-  }); */
- 
- 
-
-  
   document.addEventListener("DOMContentLoaded", () => {
     // Initialize Swiper
     const swiper = new Swiper(".hero-swiper", {

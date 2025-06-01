@@ -1,28 +1,32 @@
 .hero {
-    background-image: url('../images/contact-us.jpg');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    z-index: 0;
+  background-image: url('../images/about.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
 }
 
-.hero::before {
-    content: "";
+  
+  .hero::before {
+    content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.6); /* Adjust darkness here */
+    inset: 0;
+    background-color: rgba(35, 31, 32, 0.5); /* translucent dark overlay */
     z-index: 1;
   }
   
-  .hero .content {
+  .hero .container {
     position: relative;
-    z-index: 2; /* Ensure text appears above the mask */
-    top: 50%;
-    transform: translateY(-50%);
+    z-index: 2;
   }
-
-/*   .hero h2:after{
+  
+  .hero h2:after{
     background: var(--support-color);
     bottom: 6px;
     position: absolute;
@@ -31,30 +35,44 @@
     height: 4px;
     left: 50%;
     transform: translateX(-50%);
-  } */
+  }
+  
+ .form-control{
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--secondary-color);
+  padding: 12px 16px;
+  border-radius: 0;
+ }
 
-  .contact-info {
-    line-height: 1.6;
+  .form-control:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--secondary-color);
+    box-shadow: none;
   }
-  
-  .contact-info i {
-    min-width: 30px;
-    margin-top: 2px;
+
+   .contact-info{
+    position: relative;
+   }
+  .contact-info::before{
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: var(--support-color);
+    top:-5%;
+    left:-4%;
   }
-  
-  /* Responsive fine-tuning if needed */
-  @media (max-width: 576px) {
-    .contact-info {
-      flex-direction: row;
-      align-items: flex-start;
-    }
-  
-    .contact-info i {
-      font-size: 1.5rem;
-    }
-  
-    .contact-info span {
-      font-size: 1rem;
-    }
+
+  .form-left p {
+    font-size: 18px;
   }
-  
+
+
+
+  @media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+  }
+}
