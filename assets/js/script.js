@@ -58,4 +58,25 @@
       fadeText.classList.remove("animate__fadeIn")
       fadeText.style.opacity = 0;
   })
+
+
+  // Whatsapp js
+const whatsappBtn = document.querySelector('.whatsapp-float');
+if (whatsappBtn) {
+  whatsappBtn.addEventListener('click', (e) => {
+    e.preventDefault(); // Stop the default link opening
+
+    whatsappBtn.classList.add('clicked');
+
+    // Wait 300ms for animation, then open link
+    setTimeout(() => {
+      whatsappBtn.classList.remove('clicked');
+      window.open(whatsappBtn.href, '_blank'); // Open WhatsApp link manually
+    }, 300);
   });
+}
+
+
+  });
+
+  
