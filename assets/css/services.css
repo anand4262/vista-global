@@ -1,15 +1,16 @@
 .hero {
-    background-image: url('../images/about.jpg');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 40vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    text-align: center;
-  }
+  background-image: url('../images/about.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
   
   .hero::before {
     content: '';
@@ -24,6 +25,7 @@
     z-index: 2;
   }
   
+  
   .hero h2:after{
     background: var(--support-color);
     bottom: 6px;
@@ -34,3 +36,41 @@
     left: 50%;
     transform: translateX(-50%);
   }
+
+  .services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 4rem;
+}
+
+.services-list li {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.services-list li:hover {
+  transform: translateY(-4px);
+}
+
+.services-list li img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px; /* Rounded square */
+  flex-shrink: 0;
+}
+
+.services-list li span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}

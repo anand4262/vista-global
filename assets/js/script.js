@@ -1,5 +1,18 @@
 
   document.addEventListener("DOMContentLoaded", () => {
+
+    const hasAgreed = localStorage.getItem("disclaimerAccepted");
+
+    if (!hasAgreed) {
+      const disclaimerModal = new bootstrap.Modal(document.getElementById('disclaimerModal'));
+      disclaimerModal.show();
+
+      document.getElementById("agreeBtn").addEventListener("click", function () {
+        localStorage.setItem("disclaimerAccepted", "true");
+        disclaimerModal.hide();
+      });
+    }
+ 
     // Initialize Swiper
     const swiper = new Swiper(".hero-swiper", {
       loop: true,
