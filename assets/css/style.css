@@ -572,19 +572,61 @@ bottom: -60px;
   border-radius: 8px;
 }
 
+
+/* General responsive modal setup */
 .responsive-modal {
-  width: 100%;
-  max-width: 500px; 
+  width: 90%;                /* Allows slight margin on mobile */
+  max-width: 500px;          /* Default max-width for most screens */
+  margin: 0 auto;
 }
 
-.modal-backdrop.show {
-    background-color: var(--primary-color) !important;
-    opacity: 1 !important;
-  }
-
-/* Large screens (≥992px): modal-xl width (~1140px) */
+/* On large screens (desktops), expand it to xl size */
 @media (min-width: 992px) {
   .responsive-modal {
-    max-width: 1140px;
+    max-width: 900px;        /* Not too wide to avoid readability issues */
   }
+}
+
+/* Better text and layout for smaller screens */
+@media (max-width: 576px) {
+  .modal-content {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .modal-body {
+    padding: 1rem !important;
+  }
+
+  .modal-title {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .modal-footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Optional: Make backdrop color cleaner with transparency */
+.modal-backdrop.show {
+  background-color: rgba(0, 0, 0, 0.6) !important;  /* semi-transparent dark overlay */
+  opacity: 1 !important;
+}
+
+.values-line {
+  gap: 20px;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.value-item {
+  padding: 0 10px;
+}
+
+.vertical-divider {
+  width: 2px;
+  height: 20px;
+  background-color: var(--primary-color, #000); /* Adjust color as needed */
 }
