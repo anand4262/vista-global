@@ -189,6 +189,15 @@
         </div>
       </div>
     </section>
+
+<!-- Back to Top Button -->
+<button id="backToTopBtn" class="btn btn-dark position-fixed" style="bottom: 20px; left: 20px; display: none; z-index: 999;">
+  ↑ Top
+</button>
+
+
+
+
   </main>
 
 <!-- Modal -->
@@ -271,5 +280,29 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
   <script src="./assets/js/script.js" defer></script>
 
+  <script>
+  // Back to Top Button Logic
+  window.onscroll = function () {
+    const btn = document.getElementById("backToTopBtn");
+    if (btn) {
+      btn.style.display =
+        document.body.scrollTop > 300 || document.documentElement.scrollTop > 300
+          ? "block"
+          : "none";
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("backToTopBtn");
+    if (btn) {
+      btn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    }
+  });
+</script>
+
+
+  
 </body>
 </html>

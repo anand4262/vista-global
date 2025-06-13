@@ -220,7 +220,8 @@ color: red !important
 
   .hero {
     height: 100vh;
-    position: relative;
+    padding-top: 80px;
+    box-sizing: border-box;
   }
   
   #mainNavbar.scrolled {
@@ -235,6 +236,7 @@ color: red !important
   
   .hero-swiper, .swiper-slide {
     height: 100vh;
+    box-sizing: border-box;
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -629,4 +631,27 @@ bottom: -60px;
   width: 2px;
   height: 20px;
   background-color: var(--primary-color, #000); /* Adjust color as needed */
+}
+
+/* Button CSS*/
+#backToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  left: 30px; /* Changed from right to left */
+  z-index: 999;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+#backToTopBtn:hover {
+  background-color: #555;
 }
